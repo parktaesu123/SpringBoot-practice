@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class MyInfoService {
+public class QueryMyInfoService {
 
     private final UserFacade userFacade;
 
-    public MyInfoResponse myInfo() {
+    public MyInfoResponse QueryMyInfo() {
         User user = userFacade.currentUser();
 
         return MyInfoResponse.builder()
