@@ -1,6 +1,6 @@
-package com.example.ilovespring.global.error;
+package com.example.springboot_practice.global.error;
 
-import com.example.ilovespring.global.error.exception.ErrorCode;
+import com.example.springboot_practice.global.error.exception.ErrorCode;
 import lombok.*;
 
 import java.time.LocalDateTime;

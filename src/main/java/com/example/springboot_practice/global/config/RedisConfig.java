@@ -1,4 +1,4 @@
-package com.example.ilovespring.global.config;
+package com.example.springboot_practice.global.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;

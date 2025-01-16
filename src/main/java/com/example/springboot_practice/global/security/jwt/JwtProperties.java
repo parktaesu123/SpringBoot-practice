@@ -1,4 +1,4 @@
-package com.example.ilovespring.global.security.jwt;
+package com.example.springboot_practice.global.security.jwt;
 
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

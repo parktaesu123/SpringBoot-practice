@@ -1,9 +1,9 @@
-package com.example.ilovespring.domain.user.application.facade;
+package com.example.springboot_practice.domain.user.application.facade;
 
-import com.example.ilovespring.domain.user.domain.User;
-import com.example.ilovespring.domain.user.domain.repository.UserRepository;
-import com.example.ilovespring.domain.user.exception.NotAuthenticatedException;
-import com.example.ilovespring.domain.user.exception.UserNotFoundException;
+import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.domain.user.domain.repository.UserRepository;
+import com.example.springboot_practice.domain.user.exception.NotAuthenticatedException;
+import com.example.springboot_practice.domain.user.exception.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

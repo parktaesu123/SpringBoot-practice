@@ -1,11 +1,11 @@
-package com.example.ilovespring.domain.auth.application;
+package com.example.springboot_practice.domain.auth.application;
 
-import com.example.ilovespring.domain.auth.domain.RefreshToken;
-import com.example.ilovespring.domain.auth.domain.repository.RefreshTokenRepository;
-import com.example.ilovespring.domain.auth.exception.RefreshTokenNotFoundException;
-import com.example.ilovespring.domain.auth.presentation.dto.request.RefreshTokenRequest;
-import com.example.ilovespring.domain.auth.presentation.dto.response.TokenResponse;
-import com.example.ilovespring.global.security.jwt.JwtTokenProvider;
+import com.example.springboot_practice.domain.auth.domain.RefreshToken;
+import com.example.springboot_practice.domain.auth.domain.repository.RefreshTokenRepository;
+import com.example.springboot_practice.domain.auth.exception.RefreshTokenNotFoundException;
+import com.example.springboot_practice.domain.auth.presentation.dto.request.RefreshTokenRequest;
+import com.example.springboot_practice.domain.auth.presentation.dto.response.TokenResponse;
+import com.example.springboot_practice.global.security.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

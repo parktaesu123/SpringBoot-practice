@@ -1,7 +1,7 @@
-package com.example.ilovespring.global.security.auth;
+package com.example.springboot_practice.global.security.auth;
 
-import com.example.ilovespring.domain.user.domain.User;
-import com.example.ilovespring.domain.user.domain.repository.UserRepository;
+import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

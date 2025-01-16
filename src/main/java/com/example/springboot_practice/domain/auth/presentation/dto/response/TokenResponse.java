@@ -1,4 +1,4 @@
-package com.example.ilovespring.domain.auth.presentation.dto.response;
+package com.example.springboot_practice.domain.auth.presentation.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;

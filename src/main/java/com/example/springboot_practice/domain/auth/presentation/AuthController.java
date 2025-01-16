@@ -1,13 +1,13 @@
-package com.example.ilovespring.domain.auth.presentation;
+package com.example.springboot_practice.domain.auth.presentation;
 
-import com.example.ilovespring.domain.auth.application.LoginService;
-import com.example.ilovespring.domain.auth.application.LogoutService;
-import com.example.ilovespring.domain.auth.application.ReissueService;
-import com.example.ilovespring.domain.auth.application.SignupService;
-import com.example.ilovespring.domain.auth.presentation.dto.request.LoginRequest;
-import com.example.ilovespring.domain.auth.presentation.dto.request.RefreshTokenRequest;
-import com.example.ilovespring.domain.auth.presentation.dto.request.SignupRequest;
-import com.example.ilovespring.domain.auth.presentation.dto.response.TokenResponse;
+import com.example.springboot_practice.domain.auth.application.LoginService;
+import com.example.springboot_practice.domain.auth.application.LogoutService;
+import com.example.springboot_practice.domain.auth.application.ReissueService;
+import com.example.springboot_practice.domain.auth.application.SignupService;
+import com.example.springboot_practice.domain.auth.presentation.dto.request.LoginRequest;
+import com.example.springboot_practice.domain.auth.presentation.dto.request.RefreshTokenRequest;
+import com.example.springboot_practice.domain.auth.presentation.dto.request.SignupRequest;
+import com.example.springboot_practice.domain.auth.presentation.dto.response.TokenResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

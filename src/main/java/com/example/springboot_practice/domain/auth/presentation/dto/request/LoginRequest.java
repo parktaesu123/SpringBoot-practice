@@ -1,4 +1,4 @@
-package com.example.ilovespring.domain.auth.presentation.dto.request;
+package com.example.springboot_practice.domain.auth.presentation.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

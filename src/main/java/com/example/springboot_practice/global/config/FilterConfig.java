@@ -1,8 +1,8 @@
-package com.example.ilovespring.global.config;
+package com.example.springboot_practice.global.config;
 
-import com.example.ilovespring.global.error.GlobalExceptionFilter;
-import com.example.ilovespring.global.security.jwt.JwtTokenFilter;
-import com.example.ilovespring.global.security.jwt.JwtTokenProvider;
+import com.example.springboot_practice.global.error.GlobalExceptionFilter;
+import com.example.springboot_practice.global.security.jwt.JwtTokenFilter;
+import com.example.springboot_practice.global.security.jwt.JwtTokenProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

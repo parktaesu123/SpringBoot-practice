@@ -1,6 +1,6 @@
-package com.example.ilovespring.global.config;
+package com.example.springboot_practice.global.config;
 
-import com.example.ilovespring.global.security.jwt.JwtProperties;
+import com.example.springboot_practice.global.security.jwt.JwtProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 

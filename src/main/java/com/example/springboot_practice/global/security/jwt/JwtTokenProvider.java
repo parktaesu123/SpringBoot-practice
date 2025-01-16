@@ -1,14 +1,14 @@
-package com.example.ilovespring.global.security.jwt;
+package com.example.springboot_practice.global.security.jwt;
 
-import com.example.ilovespring.domain.auth.domain.RefreshToken;
-import com.example.ilovespring.domain.auth.domain.repository.RefreshTokenRepository;
-import com.example.ilovespring.domain.auth.exception.ExpiredTokenException;
-import com.example.ilovespring.domain.auth.exception.InvalidTokenException;
-import com.example.ilovespring.domain.auth.presentation.dto.response.TokenResponse;
-import com.example.ilovespring.domain.user.domain.User;
-import com.example.ilovespring.domain.user.domain.repository.UserRepository;
-import com.example.ilovespring.domain.user.exception.UserNotFoundException;
-import com.example.ilovespring.global.security.auth.CustomUserDetailsService;
+import com.example.springboot_practice.domain.auth.domain.RefreshToken;
+import com.example.springboot_practice.domain.auth.domain.repository.RefreshTokenRepository;
+import com.example.springboot_practice.domain.auth.exception.ExpiredTokenException;
+import com.example.springboot_practice.domain.auth.exception.InvalidTokenException;
+import com.example.springboot_practice.domain.auth.presentation.dto.response.TokenResponse;
+import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.domain.user.domain.repository.UserRepository;
+import com.example.springboot_practice.domain.user.exception.UserNotFoundException;
+import com.example.springboot_practice.global.security.auth.CustomUserDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

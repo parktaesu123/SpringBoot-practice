@@ -1,4 +1,4 @@
-package com.example.ilovespring.global.error.exception;
+package com.example.springboot_practice.global.error.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

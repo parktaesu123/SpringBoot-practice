@@ -1,4 +1,4 @@
-package com.example.ilovespring.global.security.jwt;
+package com.example.springboot_practice.global.security.jwt;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

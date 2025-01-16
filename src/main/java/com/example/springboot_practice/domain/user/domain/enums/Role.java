@@ -1,4 +1,4 @@
-package com.example.ilovespring.domain.user.domain.enums;
+package com.example.springboot_practice.domain.user.domain.enums;
 
 public enum Role {
     BASIC,

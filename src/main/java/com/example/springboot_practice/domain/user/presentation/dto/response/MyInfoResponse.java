@@ -1,4 +1,4 @@
-package com.example.ilovespring.domain.user.presentation.dto.response;
+package com.example.springboot_practice.domain.user.presentation.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

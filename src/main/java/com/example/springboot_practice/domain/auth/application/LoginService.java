@@ -1,19 +1,19 @@
-package com.example.ilovespring.domain.auth.application;
+package com.example.springboot_practice.domain.auth.application;
 
-import com.example.ilovespring.domain.auth.exception.PasswordMismatchException;
-import com.example.ilovespring.domain.auth.presentation.dto.request.LoginRequest;
-import com.example.ilovespring.domain.auth.presentation.dto.response.TokenResponse;
-import com.example.ilovespring.domain.user.domain.User;
-import com.example.ilovespring.domain.user.domain.repository.UserRepository;
-import com.example.ilovespring.domain.user.exception.UserNotFoundException;
-import com.example.ilovespring.global.security.jwt.JwtTokenProvider;
+import com.example.springboot_practice.domain.auth.exception.PasswordMismatchException;
+import com.example.springboot_practice.domain.auth.presentation.dto.request.LoginRequest;
+import com.example.springboot_practice.domain.auth.presentation.dto.response.TokenResponse;
+import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.domain.user.domain.repository.UserRepository;
+import com.example.springboot_practice.domain.user.exception.UserNotFoundException;
+import com.example.springboot_practice.global.security.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Required
+@RequiredArgsConstructor
 public class LoginService {
     private final JwtTokenProvider jwtTokenProvider;
     private final PasswordEncoder passwordEncoder;

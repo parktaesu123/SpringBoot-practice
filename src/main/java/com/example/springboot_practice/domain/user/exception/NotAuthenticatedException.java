@@ -1,4 +1,4 @@
-package com.example.ilovespring.domain.user.exception;
+package com.example.springboot_practice.domain.user.exception;
 
 public class NotAuthenticatedException extends RuntimeException {
     public NotAuthenticatedException(String message) {

@@ -1,9 +1,9 @@
-package com.example.ilovespring.global.error;
+package com.example.springboot_practice.global.error;
 
-import com.example.ilovespring.global.error.exception.ClimException;
-import com.example.ilovespring.global.error.exception.ErrorCode;
-import jakarta.validation.ConstraintViolationException;
+import com.example.springboot_practice.global.error.exception.ClimException;
+import com.example.springboot_practice.global.error.exception.ErrorCode;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

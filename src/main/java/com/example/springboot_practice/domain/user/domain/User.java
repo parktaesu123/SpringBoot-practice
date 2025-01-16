@@ -1,6 +1,6 @@
-package com.example.ilovespring.domain.user.domain;
+package com.example.springboot_practice.domain.user.domain;
 
-import com.example.ilovespring.domain.user.domain.enums.Role;
+import com.example.springboot_practice.domain.user.domain.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
