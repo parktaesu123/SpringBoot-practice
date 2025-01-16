@@ -1,4 +1,4 @@
-package com.example.springboot_practice.feed.domain.repository;
+package com.example.springboot_practice.domain.feed.domain.repository;
 
 public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
 }
