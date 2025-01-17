@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface FeedRepositoryCustom {
     List<FeedListResponse> findFeedByAccountId(String accountId);
+
+    List<FeedListResponse> findAllFeed();
 }

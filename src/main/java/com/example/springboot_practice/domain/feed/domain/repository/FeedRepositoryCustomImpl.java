@@ -24,5 +24,13 @@ public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
 
     }
 
+    @Override
+    public List<FeedListResponse> findAllFeed() {
+        return jpaQueryFactory.select(Projections.constructor(FeedListResponse.class, qFeed.title, qFeed.content, qFeed.createdAt, qFeed.user.userName))
+                .from(qFeed)
+                .orderBy(qFeed.createdAt.desc())
+                .fetch();
+    }
+
 
 }
