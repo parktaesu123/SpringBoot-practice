@@ -31,4 +31,11 @@ public class Feed {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @Builder
+    public void update(String title, String content, String createdAt) {
+        this.title = title;
+        this.content = content;
+        this.createdAt = createdAt;
+    }
 }
