@@ -15,7 +15,7 @@ public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
 
     @Override
     public List<FeedListResponse> findFeedByAccountId(String accountId) {
-        return jpaQueryFactory.select(Projections.constructor(FeedListResponse.class, qFeed.title, qFeed.content, qFeed.createdAt))
+        return jpaQueryFactory.select(Projections.constructor(FeedListResponse.class, qFeed.title, qFeed.content, qFeed.createdAt, qFeed.user.userName))
                 .from(qFeed)
                 .where(qFeed.user.accountId.eq(accountId))
                 .groupBy(qFeed.id)
