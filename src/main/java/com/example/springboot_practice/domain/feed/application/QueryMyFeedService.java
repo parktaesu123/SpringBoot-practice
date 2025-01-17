@@ -17,7 +17,7 @@ public class QueryMyFeedService {
     private final UserFacade userFacade;
 
     @Transactional(readOnly = true)
-    public List<FeedListResponse> queryMyFeed() {
+    public List<FeedListResponse> queryMyFeed(String accountId) {
         User user = userFacade.currentUser();
 
         return feedRepository.findFeedByAccountId(user.getAccountId());
