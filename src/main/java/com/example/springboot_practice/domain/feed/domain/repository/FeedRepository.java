@@ -9,4 +9,6 @@ import java.util.Optional;
 @Repository
 public interface FeedRepository extends CrudRepository<Feed, Long>, FeedRepositoryCustom {
     Optional<Feed> findByTitle(String title);
+
+    void deleteByTitle(String title);
 }
