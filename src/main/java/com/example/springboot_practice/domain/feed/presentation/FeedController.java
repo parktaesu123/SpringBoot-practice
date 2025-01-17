@@ -40,7 +40,7 @@ public class FeedController {
         updateFeedService.updateFeed(title, request);
     }
 
-    @DeleteMapping("{title}")
+    @DeleteMapping("/{title}")
     public void deleteFeed(@PathVariable String title) {
         deleteFeedService.deleteFeed(title);
     }
