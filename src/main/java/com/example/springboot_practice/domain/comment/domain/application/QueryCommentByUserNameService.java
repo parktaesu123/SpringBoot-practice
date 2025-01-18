@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class QueryCommentService {
+public class QueryCommentByUserNameService {
     private final CommentRepository commentRepository;
     private final UserFacade userFacade;
     private final FeedFacade feedFacade;

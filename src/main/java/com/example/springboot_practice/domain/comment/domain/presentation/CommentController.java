@@ -1,7 +1,7 @@
 package com.example.springboot_practice.domain.comment.domain.presentation;
 
 import com.example.springboot_practice.domain.comment.domain.application.CreateCommentService;
-import com.example.springboot_practice.domain.comment.domain.application.QueryCommentService;
+import com.example.springboot_practice.domain.comment.domain.application.QueryCommentByUserNameService;
 import com.example.springboot_practice.domain.comment.domain.presentation.dto.request.CommentRequest;
 import com.example.springboot_practice.domain.comment.domain.presentation.dto.response.CommentListResponse;
 import jakarta.validation.Valid;
@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CommentController {
     private final CreateCommentService createCommentService;
-    private final QueryCommentService queryCommentService;
+    private final QueryCommentByUserNameService queryCommentService;
 
     @PostMapping("/{title}")
     public void createComment(@PathVariable String title, @RequestBody @Valid CommentRequest request) {
