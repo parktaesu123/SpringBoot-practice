@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class CommentResponse {
+public class CommentListResponse {
     private String content;
     private String createdAt;
     private String userName;
