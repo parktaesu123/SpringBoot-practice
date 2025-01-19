@@ -32,4 +32,10 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "feed_id", nullable = false)
     private Feed feed;
+
+    @Builder
+    public void update(String content, String createdAt) {
+        this.content = content;
+        this.createdAt = createdAt;
+    }
 }
