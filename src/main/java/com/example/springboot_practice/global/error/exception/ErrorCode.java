@@ -23,10 +23,16 @@ public enum ErrorCode {
 
     //feed
     FEED_NOT_FOUND(404, "존재하지 않는 글입니다"),
+    CANNOT_MODIFY_FEED(403, "허튼 수작 부리지 마세요"),
+
+    //comment
+    COMMENT_NOT_FOUND(404, "존재하지 않는 댓글입니다."),
+    CANNOT_MODIFY_COMMENT(403, "허튼 수작 ㄴ"),
 
     // general
     BAD_REQUEST(400, "프론트 탓"),
     INTERNAL_SERVER_ERROR(500, "서버 탓");
+
 
     private final int statusCode;
     private final String ErrorMessage;
