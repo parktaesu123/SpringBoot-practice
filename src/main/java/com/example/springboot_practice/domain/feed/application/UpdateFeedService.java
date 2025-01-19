@@ -2,6 +2,7 @@ package com.example.springboot_practice.domain.feed.application;
 
 import com.example.springboot_practice.domain.feed.application.facade.FeedFacade;
 import com.example.springboot_practice.domain.feed.domain.Feed;
+import com.example.springboot_practice.domain.feed.exception.CannotModifyFeedException;
 import com.example.springboot_practice.domain.feed.presentation.dto.request.FeedRequest;
 import com.example.springboot_practice.domain.user.application.facade.UserFacade;
 import com.example.springboot_practice.domain.user.domain.User;
@@ -19,6 +20,10 @@ public class UpdateFeedService {
     public void updateFeed(String title, FeedRequest request) {
         User user = userFacade.currentUser();
         Feed feed = feedFacade.getFeeds(title);
+
+        if (!user.equals(feed.getUser())) {
+            throw CannotModifyFeedException.EXCEPTION;
+        }
 
         feed.update(request.getTitle(), request.getContent(), request.getCreatedAt());
     }
