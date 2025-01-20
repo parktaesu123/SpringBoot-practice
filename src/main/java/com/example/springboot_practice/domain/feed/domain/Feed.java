@@ -1,6 +1,7 @@
 package com.example.springboot_practice.domain.feed.domain;
 
 import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.global.entity.BaseIdEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Feed {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Feed extends BaseIdEntity {
 
     @Column(nullable = false)
     private String title;
@@ -32,7 +29,6 @@ public class Feed {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Builder
     public void update(String title, String content, String createdAt) {
         this.title = title;
         this.content = content;
