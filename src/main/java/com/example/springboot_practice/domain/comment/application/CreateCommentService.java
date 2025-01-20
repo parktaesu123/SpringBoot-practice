@@ -1,7 +1,7 @@
-package com.example.springboot_practice.domain.comment.domain.application;
+package com.example.springboot_practice.domain.comment.application;
 
 import com.example.springboot_practice.domain.comment.domain.Comment;
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.request.CommentRequest;
+import com.example.springboot_practice.domain.comment.presentation.dto.request.CommentRequest;
 import com.example.springboot_practice.domain.comment.domain.repository.CommentRepository;
 import com.example.springboot_practice.domain.feed.application.facade.FeedFacade;
 import com.example.springboot_practice.domain.feed.domain.Feed;
