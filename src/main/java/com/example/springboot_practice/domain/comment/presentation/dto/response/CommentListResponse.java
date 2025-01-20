@@ -1,11 +1,11 @@
-package com.example.springboot_practice.domain.comment.domain.presentation.dto.response;
+package com.example.springboot_practice.domain.comment.presentation.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class CommentDetailResponse {
+public class CommentListResponse {
     private String content;
     private String createdAt;
     private String userName;

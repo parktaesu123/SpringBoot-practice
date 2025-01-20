@@ -1,10 +1,9 @@
-package com.example.springboot_practice.domain.comment.domain.application;
+package com.example.springboot_practice.domain.comment.application;
 
 import com.example.springboot_practice.domain.comment.domain.Comment;
 import com.example.springboot_practice.domain.comment.domain.repository.CommentRepository;
 import com.example.springboot_practice.domain.comment.exception.CannotModifyCommentException;
 import com.example.springboot_practice.domain.comment.exception.CommentNotFoundException;
-import com.example.springboot_practice.domain.feed.application.facade.FeedFacade;
 import com.example.springboot_practice.domain.user.application.facade.UserFacade;
 import com.example.springboot_practice.domain.user.domain.User;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class UpdateCommentService {
     private final UserFacade userFacade;
     private final CommentRepository commentRepository;
-    private final FeedFacade feedFacade;
 
 
     @Transactional

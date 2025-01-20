@@ -1,4 +1,4 @@
-package com.example.springboot_practice.domain.comment.domain.presentation.dto.request;
+package com.example.springboot_practice.domain.comment.presentation.dto.request;
 
 import lombok.Getter;
 

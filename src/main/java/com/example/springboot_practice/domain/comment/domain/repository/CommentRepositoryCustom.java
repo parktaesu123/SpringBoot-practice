@@ -1,7 +1,7 @@
 package com.example.springboot_practice.domain.comment.domain.repository;
 
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.response.CommentDetailResponse;
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.response.CommentListResponse;
+import com.example.springboot_practice.domain.comment.presentation.dto.response.CommentDetailResponse;
+import com.example.springboot_practice.domain.comment.presentation.dto.response.CommentListResponse;
 
 import java.util.List;
 
