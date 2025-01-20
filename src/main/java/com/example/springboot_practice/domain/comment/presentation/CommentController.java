@@ -1,12 +1,9 @@
-package com.example.springboot_practice.domain.comment.domain.presentation;
+package com.example.springboot_practice.domain.comment.presentation;
 
-import com.example.springboot_practice.domain.comment.domain.application.CreateCommentService;
-import com.example.springboot_practice.domain.comment.domain.application.QueryCommentByUserNameService;
-import com.example.springboot_practice.domain.comment.domain.application.QueryCommentListService;
-import com.example.springboot_practice.domain.comment.domain.application.UpdateCommentService;
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.request.CommentRequest;
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.response.CommentDetailResponse;
-import com.example.springboot_practice.domain.comment.domain.presentation.dto.response.CommentListResponse;
+import com.example.springboot_practice.domain.comment.application.*;
+import com.example.springboot_practice.domain.comment.presentation.dto.request.CommentRequest;
+import com.example.springboot_practice.domain.comment.presentation.dto.response.CommentDetailResponse;
+import com.example.springboot_practice.domain.comment.presentation.dto.response.CommentListResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +18,7 @@ public class CommentController {
     private final QueryCommentByUserNameService queryCommentService;
     private final QueryCommentListService queryCommentListService;
     private final UpdateCommentService updateCommentService;
+    private final DeleteCommentService deleteCommentService;
 
     @PostMapping("/{title}")
     public void createComment(@PathVariable String title, @RequestBody @Valid CommentRequest request) {
@@ -41,4 +39,10 @@ public class CommentController {
     public void updateComment(@PathVariable Long id) {
         updateCommentService.updateComment(id);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteComment(@PathVariable Long id) {
+        deleteCommentService.deleteComment(id);
+    }
+
 }
