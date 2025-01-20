@@ -2,6 +2,7 @@ package com.example.springboot_practice.domain.comment.domain;
 
 import com.example.springboot_practice.domain.feed.domain.Feed;
 import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.global.entity.BaseIdEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,10 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Comment extends BaseIdEntity {
 
     @Column(nullable = false)
     private String content;
