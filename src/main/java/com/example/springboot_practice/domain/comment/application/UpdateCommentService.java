@@ -28,7 +28,7 @@ public class UpdateCommentService {
             throw CannotModifyCommentException.EXCEPTION;
         }
 
-        comment.update(comment.getContent(), comment.getCreatedAt());
+        comment.update(comment.getContent());
 
     }
 }

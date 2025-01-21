@@ -25,7 +25,6 @@ public class QueryFeedService {
         return FeedResponse.builder()
                 .title(feed.getTitle())
                 .content(feed.getContent())
-                .createdAt(feed.getCreatedAt())
                 .userName(user.getUserName())
                 .build();
     }
