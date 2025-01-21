@@ -25,6 +25,6 @@ public class UpdateFeedService {
             throw CannotModifyFeedException.EXCEPTION;
         }
 
-        feed.update(request.getTitle(), request.getContent(), request.getCreatedAt());
+        feed.update(request.getTitle(), request.getContent());
     }
 }
