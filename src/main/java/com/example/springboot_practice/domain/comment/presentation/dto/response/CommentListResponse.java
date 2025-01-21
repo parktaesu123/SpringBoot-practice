@@ -7,7 +7,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class CommentListResponse {
     private String content;
-    private String createdAt;
     private String userName;
     private String title;
 }
