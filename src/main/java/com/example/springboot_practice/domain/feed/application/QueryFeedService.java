@@ -4,6 +4,7 @@ import com.example.springboot_practice.domain.feed.application.facade.FeedFacade
 import com.example.springboot_practice.domain.feed.domain.Feed;
 import com.example.springboot_practice.domain.feed.domain.repository.FeedRepository;
 import com.example.springboot_practice.domain.feed.presentation.dto.response.FeedResponse;
+import com.example.springboot_practice.domain.heart.application.facade.HeartFacade;
 import com.example.springboot_practice.domain.user.application.facade.UserFacade;
 import com.example.springboot_practice.domain.user.domain.User;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class QueryFeedService {
     private final UserFacade userFacade;
     private final FeedFacade feedFacade;
+    private final HeartFacade heartFacade;
     private final FeedRepository feedRepository;
 
     @Transactional(readOnly = true)
@@ -25,6 +27,8 @@ public class QueryFeedService {
         return FeedResponse.builder()
                 .title(feed.getTitle())
                 .content(feed.getContent())
+                .heartCounts(feed.getHeartCounts())
+                .heartStatus(heartFacade.checkHeart(user, feed))
                 .userName(user.getUserName())
                 .build();
     }
