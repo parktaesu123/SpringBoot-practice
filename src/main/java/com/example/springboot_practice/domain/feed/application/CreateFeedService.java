@@ -22,6 +22,8 @@ public class CreateFeedService {
         feedRepository.save(Feed.builder()
                         .title(request.getTitle())
                         .content(request.getContent())
+                        .heartCounts(0)
+                        .heartStatus(false)
                         .user(user)
                 .build());
     }
