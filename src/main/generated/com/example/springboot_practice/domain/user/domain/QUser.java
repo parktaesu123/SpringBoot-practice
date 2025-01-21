@@ -19,9 +19,12 @@ public class QUser extends EntityPathBase<User> {
 
     public static final QUser user = new QUser("user");
 
+    public final com.example.springboot_practice.global.entity.QBaseIdEntity _super = new com.example.springboot_practice.global.entity.QBaseIdEntity(this);
+
     public final StringPath accountId = createString("accountId");
 
-    public final NumberPath<Long> id = createNumber("id", Long.class);
+    //inherited
+    public final NumberPath<Long> id = _super.id;
 
     public final StringPath introduction = createString("introduction");
 

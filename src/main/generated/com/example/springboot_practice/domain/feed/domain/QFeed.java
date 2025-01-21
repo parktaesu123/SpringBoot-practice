@@ -22,15 +22,20 @@ public class QFeed extends EntityPathBase<Feed> {
 
     public static final QFeed feed = new QFeed("feed");
 
+    public final com.example.springboot_practice.global.entity.QBaseTimeIdEntity _super = new com.example.springboot_practice.global.entity.QBaseTimeIdEntity(this);
+
     public final StringPath content = createString("content");
 
-    public final StringPath createdAt = createString("createdAt");
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
-    public final NumberPath<Long> id = createNumber("id", Long.class);
+    //inherited
+    public final NumberPath<Long> id = _super.id;
 
     public final StringPath title = createString("title");
 
-    public final StringPath updatedAt = createString("updatedAt");
+    //inherited
+    public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
 
     public final com.example.springboot_practice.domain.user.domain.QUser user;
 
