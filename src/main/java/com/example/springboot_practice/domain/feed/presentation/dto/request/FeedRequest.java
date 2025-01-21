@@ -6,5 +6,4 @@ import lombok.Getter;
 public class FeedRequest {
     private String title;
     private String content;
-    private String createdAt;
 }
