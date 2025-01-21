@@ -21,11 +21,10 @@ public class CreateCommentService {
     @Transactional
     public void createComment(String title, CommentRequest request) {
         User user = userFacade.currentUser();
-        Feed feed = feedFacade.getFeeds(title);
+        Feed feed = feedFacade.getFeeds(title); 
 
         commentRepository.save(Comment.builder()
                         .content(request.getContent())
-                        .createdAt(request.getCreatedAt())
                         .user(user)
                         .feed(feed)
                 .build());
