@@ -8,6 +8,5 @@ import lombok.Getter;
 public class FeedListResponse {
     private String title;
     private String content;
-    private String createdAt;
     private String userName;
 }
