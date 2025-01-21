@@ -21,13 +21,24 @@ public class Feed extends BaseTimeIdEntity {
     @Column(nullable = false)
     private String content;
 
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    private Integer heartCounts;
+
+    private boolean heartStatus;
+
     public void update(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public void pressHeart() {
+        this.heartCounts += 1;
+    }
+
+    public void cancelHeart() {
+        this.heartCounts -= 1;
     }
 }
