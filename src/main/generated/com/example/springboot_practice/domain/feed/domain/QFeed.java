@@ -29,6 +29,10 @@ public class QFeed extends EntityPathBase<Feed> {
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
+    public final NumberPath<Integer> heartCounts = createNumber("heartCounts", Integer.class);
+
+    public final BooleanPath heartStatus = createBoolean("heartStatus");
+
     //inherited
     public final NumberPath<Long> id = _super.id;
 
