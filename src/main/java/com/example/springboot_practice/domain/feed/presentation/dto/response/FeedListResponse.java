@@ -8,5 +8,7 @@ import lombok.Getter;
 public class FeedListResponse {
     private String title;
     private String content;
+    private Integer heartCounts;
+    private boolean heartStatus;
     private String userName;
 }
