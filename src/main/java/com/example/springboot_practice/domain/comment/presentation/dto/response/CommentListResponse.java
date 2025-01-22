@@ -9,4 +9,5 @@ public class CommentListResponse {
     private String content;
     private String userName;
     private String title;
+    private String createdAt;
 }
