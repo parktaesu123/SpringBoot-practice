@@ -2,6 +2,7 @@ package com.example.springboot_practice.domain.feed.domain.repository;
 
 import com.example.springboot_practice.domain.feed.domain.QFeed;
 import com.example.springboot_practice.domain.feed.presentation.dto.response.FeedListResponse;
+import com.example.springboot_practice.domain.feed.presentation.dto.response.FeedResponse;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
@@ -38,6 +39,13 @@ public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
                 .from(qFeed)
                 .orderBy(qFeed.heartCounts.desc())
                 .fetch();
+    }
+
+    @Override
+    public FeedResponse findFeedByTitle(String title) {
+        return jpaQueryFactory.select(Projections.constructor(FeedResponse.class, qFeed.title, qFeed.content, qFeed.createdAt, qFeed.heartCounts, qFeed.heartStatus, qFeed.user.userName))
+                .from(qFeed)
+                .fetchOne();
     }
 
 
