@@ -26,6 +26,10 @@ public class QHeart extends EntityPathBase<Heart> {
 
     public final com.example.springboot_practice.domain.feed.domain.QFeed feed;
 
+    public final NumberPath<Integer> heartCounts = createNumber("heartCounts", Integer.class);
+
+    public final BooleanPath heartStatus = createBoolean("heartStatus");
+
     //inherited
     public final NumberPath<Long> id = _super.id;
 
