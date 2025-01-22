@@ -32,5 +32,13 @@ public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
                 .fetch();
     }
 
+    @Override
+    public List<FeedListResponse> findFeedByHeart() {
+        return jpaQueryFactory.select(Projections.constructor(FeedListResponse.class, qFeed.title, qFeed.content, qFeed.createdAt, qFeed.heartCounts, qFeed.heartStatus, qFeed.user.userName))
+                .from(qFeed)
+                .orderBy(qFeed.heartCounts.desc())
+                .fetch();
+    }
+
 
 }

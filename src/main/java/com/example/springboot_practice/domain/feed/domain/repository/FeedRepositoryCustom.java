@@ -8,4 +8,6 @@ public interface FeedRepositoryCustom {
     List<FeedListResponse> findFeedByAccountId(String accountId);
 
     List<FeedListResponse> findAllFeed();
+
+    List<FeedListResponse> findFeedByHeart();
 }
