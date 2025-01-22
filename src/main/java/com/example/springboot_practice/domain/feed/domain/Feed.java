@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Feed extends BaseTimeIdEntity {
 
     @Column(nullable = false)
@@ -28,6 +28,7 @@ public class Feed extends BaseTimeIdEntity {
     private Integer heartCounts;
 
     private boolean heartStatus;
+
 
     public void update(String title, String content) {
         this.title = title;
