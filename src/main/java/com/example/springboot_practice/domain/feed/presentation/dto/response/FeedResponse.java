@@ -4,15 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
+
 @Getter
 @Builder
 @AllArgsConstructor
 public class FeedResponse {
     private String title;
     private String content;
-    private String createdAt;
+    private LocalDateTime createdAt;
     private Integer heartCounts;
-    private String userName;
     private boolean heartStatus;
-
+    private String userName;
 }
