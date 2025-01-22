@@ -20,6 +20,7 @@ public class FeedController {
     private final UpdateFeedService updateFeedService;
     private final DeleteFeedService deleteFeedService;
     private final QueryFeedService queryfeedService;
+    private final QueryFeedByHeartService queryFeedByHeartService;
 
 
     @PostMapping("")
@@ -37,14 +38,19 @@ public class FeedController {
         return queryAllFeedService.queryAllFeed();
     }
 
-    @PatchMapping("/{title}")
-    public void updateFeed(@PathVariable String title, @RequestBody @Valid FeedRequest request) {
-        updateFeedService.updateFeed(title, request);
+    @GetMapping("/heart")
+    public List<FeedListResponse> queryFeedByHeart() {
+        return queryFeedByHeartService.queryFeedByHeart();
     }
 
     @GetMapping("/{title}")
     public FeedResponse queryFeed(@PathVariable String title) {
         return queryfeedService.queryFeed(title);
+    }
+
+    @PatchMapping("/{title}")
+    public void updateFeed(@PathVariable String title, @RequestBody @Valid FeedRequest request) {
+        updateFeedService.updateFeed(title, request);
     }
 
     @DeleteMapping("/{title}")
