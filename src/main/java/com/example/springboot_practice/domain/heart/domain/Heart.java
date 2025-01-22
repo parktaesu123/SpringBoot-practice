@@ -25,4 +25,8 @@ public class Heart extends BaseIdEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false)
     private User user;
+
+    private Integer heartCounts;
+
+    private boolean heartStatus;
 }
