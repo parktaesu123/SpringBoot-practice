@@ -15,5 +15,7 @@ public class MyInfoResponse {
 
     private String accountId;
 
+    private Integer connectionCounts;
+
     private String introduction;
 }
