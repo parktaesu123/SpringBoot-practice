@@ -35,4 +35,8 @@ public class User extends BaseIdEntity {
         this.userName = userName;
         this.introduction = introduction;
     }
+
+    public void addConnectionCounts() {
+        this.connectionCounts += 1;
+    }
 }
