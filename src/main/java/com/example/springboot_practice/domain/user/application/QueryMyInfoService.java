@@ -19,6 +19,7 @@ public class QueryMyInfoService {
                 .userName(user.getUserName())
                 .accountId(user.getAccountId())
                 .password(user.getPassword())
+                .connectionCounts(user.getConnectionCounts())
                 .introduction(user.getIntroduction())
                 .build();
     }
