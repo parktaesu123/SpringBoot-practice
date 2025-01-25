@@ -23,6 +23,8 @@ public class QUser extends EntityPathBase<User> {
 
     public final StringPath accountId = createString("accountId");
 
+    public final NumberPath<Integer> connectionCounts = createNumber("connectionCounts", Integer.class);
+
     //inherited
     public final NumberPath<Long> id = _super.id;
 
