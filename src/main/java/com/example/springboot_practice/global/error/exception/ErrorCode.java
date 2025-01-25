@@ -29,6 +29,9 @@ public enum ErrorCode {
     COMMENT_NOT_FOUND(404, "존재하지 않는 댓글입니다."),
     CANNOT_MODIFY_COMMENT(403, "허튼 수작 ㄴ"),
 
+    //connection
+    CONNECTED_ALREADY(409,"이미 1촌입니다"),
+
     // general
     BAD_REQUEST(400, "프론트 탓"),
     INTERNAL_SERVER_ERROR(500, "서버 탓");
