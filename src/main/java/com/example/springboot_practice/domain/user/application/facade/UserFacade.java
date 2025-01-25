@@ -24,4 +24,9 @@ public class UserFacade {
         return userRepository.findByAccountId(authentication.getName())
                 .orElseThrow(() -> UserNotFoundException.EXCEPTION);
     }
+
+    public User findTargetUser(String accountId) {
+        return userRepository.findByAccountId(accountId)
+                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
+    }
 }
