@@ -20,6 +20,7 @@ public class SignupService {
                 .userName(request.getUserName())
                 .accountId(request.getAccountId())
                 .password(passwordEncoder.encode(request.getPassword()))
+                .connectionCounts(0)
                 .introduction(request.getIntroduction())
                 .role(request.getRole())
                 .build());
