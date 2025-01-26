@@ -30,7 +30,6 @@ public class User extends BaseIdEntity {
 
     private Integer connectionCounts;
 
-    @Builder
     public void updateUser(String userName, String introduction) {
         this.userName = userName;
         this.introduction = introduction;
