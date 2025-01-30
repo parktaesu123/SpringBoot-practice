@@ -16,7 +16,7 @@ public class NotificationController {
     private final NotificationService notificationService;
 
     @GetMapping("/subscribe")
-    public SseEmitter subscribe(@AuthenticationPrincipal UserDetails userDetails) {
-        return notificationService.subscribe(userDetails);
+    public SseEmitter subscribe() {
+        return notificationService.subscribe();
     }
 }
