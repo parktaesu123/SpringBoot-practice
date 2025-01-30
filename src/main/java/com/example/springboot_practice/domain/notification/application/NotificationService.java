@@ -1,8 +1,8 @@
 package com.example.springboot_practice.domain.notification.application;
 
+import com.example.springboot_practice.domain.user.application.facade.UserFacade;
+import com.example.springboot_practice.domain.user.domain.User;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
@@ -10,10 +10,11 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 @RequiredArgsConstructor
 public class NotificationService {
     private final SseEmitterService sseEmitterService;
+    private final UserFacade userFacade;
 
-    public SseEmitter subscribe(UserDetails userDetails) {
-        Long userId = Long.parseLong(userDetails.getUsername());
-        return sseEmitterService.subscribe(userId);
+    public SseEmitter subscribe() {
+        User user = userFacade.currentUser();
+        return sseEmitterService.subscribe(user.getAccountId());
     }
 
 }
