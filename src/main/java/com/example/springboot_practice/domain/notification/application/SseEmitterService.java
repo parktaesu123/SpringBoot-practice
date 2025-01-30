@@ -11,16 +11,15 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 @RequiredArgsConstructor
 public class SseEmitterService {
-    private final Map<Long, SseEmitter> emitters = new ConcurrentHashMap<>();
-    private final NotificationRepository notificationRepository;
+    private final Map<String, SseEmitter> emitters = new ConcurrentHashMap<>();
 
-    public SseEmitter subscribe(Long userId) {
+    public SseEmitter subscribe(String accountId) {
         SseEmitter emitter = new SseEmitter(Long.MAX_VALUE);
-        emitters.put(userId, emitter);
+        emitters.put(accountId, emitter);
 
-        emitter.onCompletion(() -> emitters.remove(userId));
-        emitter.onTimeout(() -> emitters.remove(userId));
-        emitter.onError((e) -> emitters.remove(userId));
+        emitter.onCompletion(() -> emitters.remove(accountId));
+        emitter.onTimeout(() -> emitters.remove(accountId));
+        emitter.onError((e) -> emitters.remove(accountId));
 
         return emitter;
     }
