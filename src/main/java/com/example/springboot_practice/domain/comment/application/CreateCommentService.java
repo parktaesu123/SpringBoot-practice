@@ -39,7 +39,7 @@ public class CreateCommentService {
 
         if (!user.equals(feedOwner)) {
             sendNotificationService.sendNotification(new NotificationRequest(
-                    feedOwner.getUserName(),
+                    feedOwner,
                     user.getUserName() + "님이 댓글을 작성하였습니다.",
                     NotificationType.COMMENT,
                     notificationFacade.checkRead(feedOwner)));
