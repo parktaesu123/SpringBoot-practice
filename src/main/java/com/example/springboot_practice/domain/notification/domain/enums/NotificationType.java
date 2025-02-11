@@ -5,6 +5,6 @@ import lombok.Getter;
 @Getter
 public enum NotificationType {
     COMMENT,
-    LIKE,
+    HEART,
     CONNECTION
 }
