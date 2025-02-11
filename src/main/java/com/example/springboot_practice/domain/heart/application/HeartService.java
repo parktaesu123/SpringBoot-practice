@@ -44,7 +44,7 @@ public class HeartService {
 
             if (!user.equals(feedOwner)) {
                 sendNotificationService.sendNotification(new NotificationRequest(
-                        feedOwner.getUserName(),
+                        feedOwner,
                         user.getUserName() + "님이 하트를 눌렀습니다.",
                         NotificationType.HEART,
                         notificationFacade.checkRead(feedOwner)));
