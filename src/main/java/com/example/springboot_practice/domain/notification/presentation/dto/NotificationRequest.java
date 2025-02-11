@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class NotificationRequest {
-    private String receiveUser;
+    private User receiveUser;
     private String message;
     private NotificationType type;
     private boolean isRead;
