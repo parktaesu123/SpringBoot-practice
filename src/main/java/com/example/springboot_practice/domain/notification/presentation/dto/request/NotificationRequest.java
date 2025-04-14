@@ -1,4 +1,4 @@
-package com.example.springboot_practice.domain.notification.presentation.dto;
+package com.example.springboot_practice.domain.notification.presentation.dto.request;
 
 import com.example.springboot_practice.domain.notification.domain.enums.NotificationType;
 import com.example.springboot_practice.domain.user.domain.User;
