@@ -54,6 +54,7 @@ public class FeedRepositoryCustomImpl implements FeedRepositoryCustom {
                 .from(qFeed)
                 .leftJoin(qHeart)
                 .on(qHeart.feed.eq(qFeed))
+                .where(qFeed.title.eq(title))
                 .fetchOne();
     }
 
