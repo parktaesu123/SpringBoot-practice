@@ -12,23 +12,23 @@ import lombok.NoArgsConstructor;
 @Getter
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
-public class User extends BaseIdEntity {
+    @AllArgsConstructor
+    public class User extends BaseIdEntity {
 
-    @Column(name = "user_name", nullable = false)
-    private String userName;
+        @Column(name = "user_name", nullable = false)
+        private String userName;
 
-    @Column(nullable = false)
-    private String accountId;
+        @Column(nullable = false)
+        private String accountId;
 
-    private String introduction;
+        private String introduction;
 
-    @Column(nullable = false)
-    private String password;
+        @Column(nullable = false)
+        private String password;
 
-    private Role role;
+        private Role role;
 
-    private Integer connectionCounts;
+        private Integer connectionCounts;
 
     public void updateUser(String userName, String introduction) {
         this.userName = userName;
