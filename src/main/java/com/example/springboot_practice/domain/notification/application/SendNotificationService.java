@@ -2,8 +2,7 @@ package com.example.springboot_practice.domain.notification.application;
 
 import com.example.springboot_practice.domain.notification.domain.Notification;
 import com.example.springboot_practice.domain.notification.domain.repository.NotificationRepository;
-import com.example.springboot_practice.domain.notification.presentation.dto.NotificationRequest;
-import com.example.springboot_practice.domain.user.domain.User;
+import com.example.springboot_practice.domain.notification.presentation.dto.request.NotificationRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;

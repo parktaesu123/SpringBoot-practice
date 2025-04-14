@@ -9,7 +9,7 @@ import com.example.springboot_practice.domain.heart.presentation.dto.response.He
 import com.example.springboot_practice.domain.notification.application.SendNotificationService;
 import com.example.springboot_practice.domain.notification.application.facade.NotificationFacade;
 import com.example.springboot_practice.domain.notification.domain.enums.NotificationType;
-import com.example.springboot_practice.domain.notification.presentation.dto.NotificationRequest;
+import com.example.springboot_practice.domain.notification.presentation.dto.request.NotificationRequest;
 import com.example.springboot_practice.domain.user.application.facade.UserFacade;
 import com.example.springboot_practice.domain.user.domain.User;
 import lombok.RequiredArgsConstructor;
