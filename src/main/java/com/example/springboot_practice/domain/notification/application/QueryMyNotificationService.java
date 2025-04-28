@@ -1,6 +1,5 @@
 package com.example.springboot_practice.domain.notification.application;
 
-import com.example.springboot_practice.domain.notification.domain.repository.NotificationRepository;
 import com.example.springboot_practice.domain.notification.presentation.dto.response.NotificationResponse;
 import com.example.springboot_practice.domain.user.application.facade.UserFacade;
 import com.example.springboot_practice.domain.user.domain.User;
